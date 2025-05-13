@@ -85,7 +85,7 @@
         <a href="https://github.com/p4p2" class="hover:text-[#b300ff] transition" target="_blank"><i class="fab fa-github-square"></i></a>
         <a href="https://twitter.com/yourusername" class="hover:text-[#b300ff] transition" target="_blank"><i class="fab fa-twitter-square"></i></a>
         <a href="mailto:barmansubhajit12345@gmail.com" class="hover:text-[#b300ff] transition"><i class="fas fa-envelope-square"></i></a>
-        <a href="contact.html" class="logo-link"><span class="logo-text">Contact Me</span></a>
+        <!-- <a href="contact.html" class="logo-link"><span class="logo-text">Contact Me</span></a> -->
       </div>
 
       <!-- Console -->
@@ -258,6 +258,42 @@
     }
 
     window.addEventListener("load", typeNextLine);
-  </script>
+</script>
+
+// netlify/functions/fetch-rss.js
+<script>
+const fetch = require('node-fetch'); // Add this line if not already available
+
+exports.handler = async function(event, context) {
+  const apiUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@barmansubhajit09&api_key=your-api-key';
+  
+  try {
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+
+    return {
+      statusCode: 200,
+      body: JSON.stringify(data),
+    };
+  } catch (error) {
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: 'Failed to fetch RSS feed' }),
+    };
+  }
+};
+
+fetch('/.netlify/functions/fetch-rss')  // Use the Netlify Function URL
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+    renderPosts(data.items);  // Pass the posts to your render function
+  })
+  .catch(error => {
+    console.error('Error fetching RSS feed:', error);
+  });
+
+</script>
+
 </body>
 </html>
