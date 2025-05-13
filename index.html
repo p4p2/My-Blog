@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -8,285 +7,257 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet" />
+
   <style>
     body {
       font-family: 'Poppins', sans-serif;
     }
+
     #hacker-loader::after {
-  content: "_";
-  animation: blink 1s infinite steps(1);
-  margin-left: 4px;
-  color: #00ff00;
-}
+      content: "_";
+      animation: blink 1s infinite steps(1);
+      margin-left: 4px;
+      color: #00ff00;
+    }
 
-@keyframes blink {
-  50% { opacity: 0; }
-}
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
 
-<style>
-  .logo-link {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #8a00c8;
-    color: white;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 1.2rem;
-    border-radius: 50px;
-    text-align: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
-    text-decoration: none; /* Remove underline */
-  }
+    .logo-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #8a00c8;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 1.2rem;
+      border-radius: 50px;
+      text-align: center;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-in-out;
+      text-decoration: none;
+    }
 
-  .logo-link:hover {
-    background-color: #b300ff; /* On hover change the background */
-    transform: scale(1.05); /* Slightly grow the button */
-  }
+    .logo-link:hover {
+      background-color: #b300ff;
+      transform: scale(1.05);
+    }
 
-  .logo-text {
-    display: inline-block;
-    position: relative;
-  }
-</style>
-
+    .logo-text {
+      display: inline-block;
+      position: relative;
+    }
   </style>
 </head>
 
 <body class="bg-[#2f2930] text-white min-h-screen flex flex-col">
-  <!-- Hacker Style Loader -->
-<div id="hacker-loader" class="fixed inset-0 bg-black text-green-400 font-mono text-sm z-50 flex items-center justify-center p-6">
-  <div id="loader-text" class="leading-tight w-full max-w-md">
-    <div>~ Initializing system...</div>
+  <!-- Loader -->
+  <div id="hacker-loader" class="fixed inset-0 bg-black text-green-400 font-mono text-sm z-50 flex items-center justify-center p-6">
+    <div id="loader-text" class="leading-tight w-full max-w-md">
+      <div>~ Initializing system...</div>
+    </div>
   </div>
-</div>
 
   <div class="flex flex-col md:flex-row max-w-7xl mx-auto flex-grow w-full">
     <!-- Sidebar -->
     <div class="flex flex-col items-center md:items-start md:border-r md:border-[#3a2a4a] md:pr-10 md:w-72">
       <img alt="Profile" class="rounded-full border-4 border-[#8a00c8] w-48 h-48 object-cover mt-20"
         src="https://storage.googleapis.com/a1aa/image/31a1fb45-ab55-4267-e056-64f282a3b774.jpg" />
-        <!-- Sidebar -->
-  <div class="flex flex-col items-center md:items-start md:border-r md:border-[#3a2a4a] md:pr-10 md:w-72">  
-  <!-- Terminal Clock -->
-  <div class="mt-10 w-full bg-black text-green-400 font-mono p-4 rounded border border-green-700 text-sm">
-    <p>🕒 Current Time:</p>
-    <p id="clock" class="mt-1 text-white"></p>
-  </div>
-</div>
 
+      <!-- Clock -->
+      <div class="mt-10 w-full bg-black text-green-400 font-mono p-4 rounded border border-green-700 text-sm">
+        <p>🕒 Current Time:</p>
+        <p id="clock" class="mt-1 text-white"></p>
+      </div>
     </div>
 
-    <!-- Main + Blog Posts Section -->
-    <div class="flex flex-col md:flex-row flex-grow w-full">
-      <!-- Main Content -->
-      <main class="flex flex-col justify-start px-6 md:px-10 max-w-3xl w-full mt-10 md:mt-20">
-        <h1 class="text-4xl font-extrabold uppercase tracking-wide mb-4 text-center md:text-left">Subhajit Barman</h1>
-        <p class="text-sm max-w-xl mb-6 text-center md:text-left">
-          Welcome to my website, I am a cyber security researcher and freelancer. On this website you will discover the
-          different things I am passionate about and currently working on.
-        </p>
+    <!-- Main Content -->
+    <main class="flex flex-col justify-start px-6 md:px-10 max-w-3xl w-full mt-10 md:mt-20">
+      <h1 class="text-4xl font-extrabold uppercase tracking-wide mb-4 text-center md:text-left">Subhajit Barman</h1>
+      <p class="text-sm max-w-xl mb-6 text-center md:text-left">
+        Welcome to my website, I am a cyber security researcher and freelancer. On this website you will discover the
+        different things I am passionate about and currently working on.
+      </p>
 
-        <!-- Social Media Links -->
-        <!-- Social Media Links Section -->
-<div class="flex justify-center md:justify-start gap-4 text-[#8a00c8] text-xl mb-8">
-  <a href="https://github.com/p4p2" class="hover:text-[#b300ff] transition" target="_blank"><i class="fab fa-github-square"></i></a>
-  <a href="https://twitter.com/yourusername" class="hover:text-[#b300ff] transition" target="_blank"><i class="fab fa-twitter-square"></i></a>
-  <a href="mailto:barmansubhajit12345@gmail.com" class="hover:text-[#b300ff] transition"><i class="fas fa-envelope-square"></i></a>
-  <!-- Add Link to Contact Page -->
-  <a href="contact.html" class="logo-link">
-    <span class="logo-text">Contact Me</span>
-  </a></div>
+      <!-- Social Media Links -->
+      <div class="flex justify-center md:justify-start gap-4 text-[#8a00c8] text-xl mb-8">
+        <a href="https://github.com/p4p2" class="hover:text-[#b300ff] transition" target="_blank"><i class="fab fa-github-square"></i></a>
+        <a href="https://twitter.com/yourusername" class="hover:text-[#b300ff] transition" target="_blank"><i class="fab fa-twitter-square"></i></a>
+        <a href="mailto:barmansubhajit12345@gmail.com" class="hover:text-[#b300ff] transition"><i class="fas fa-envelope-square"></i></a>
+        <a href="contact.html" class="logo-link"><span class="logo-text">Contact Me</span></a>
+      </div>
 
-
-        <!-- Hacker Tools Section -->
-        <section class="mt-10">
-          <section class="mt-12">
-            <h2 class="text-2xl font-bold text-[#8a00c8] mb-4">💻 Hacker Console</h2>
-            <div id="console"
-              class="bg-black text-green-400 font-mono p-4 rounded-md border border-green-700 h-64 overflow-auto text-sm shadow-inner">
-              <div id="console-output"></div>
-            </div>
-
-          </section>
-
-          <section class="mt-10">
-
-            <h2 class="text-2xl font-bold text-[#8a00c8] mb-4">🛠️ Hacker Tools I Use</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div class="bg-[#1f1a22] p-4 rounded-lg border border-[#3a2a4a] shadow">
-                <h3 class="text-white font-semibold mb-1">🧪 Burp Suite</h3>
-                <p class="text-gray-400 text-sm">Web vulnerability scanner & proxy for pentesting web apps.</p>
-              </div>
-              <div class="bg-[#1f1a22] p-4 rounded-lg border border-[#3a2a4a] shadow">
-                <h3 class="text-white font-semibold mb-1">🔍 Nmap</h3>
-                <p class="text-gray-400 text-sm">Network discovery and security auditing tool.</p>
-              </div>
-              <div class="bg-[#1f1a22] p-4 rounded-lg border border-[#3a2a4a] shadow">
-                <h3 class="text-white font-semibold mb-1">💣 Metasploit</h3>
-                <p class="text-gray-400 text-sm">Penetration testing framework with exploit modules.</p>
-              </div>
-              <div class="bg-[#1f1a22] p-4 rounded-lg border border-[#3a2a4a] shadow">
-                <h3 class="text-white font-semibold mb-1">📦 Wireshark</h3>
-                <p class="text-gray-400 text-sm">Packet analyzer for network traffic analysis.</p>
-              </div>
-            </div>
-          </section>
-         
-
-      </main>
-      
-
-      <!-- Blog Sidebar -->
-      <aside class="w-full md:w-80 mt-10 md:mt-0 md:pl-8">
-        <h2 class="text-xl font-bold mb-4 text-[#8a00c8]">Latest Medium Posts</h2>
-        <div class="mb-4">
-          <label for="tag-filter" class="block text-sm font-medium text-white mb-1">Filter by Category</label>
-          <select id="tag-filter" class="bg-[#1f1a22] border border-[#3a2a4a] text-white rounded px-3 py-2 w-full">
-            <option value="all">All</option>
-            <option value="pentesting">Pentesting</option>
-            <option value="tools">Tools</option>
-            <option value="tutorials">Tutorials</option>
-            <!-- Add more tags here -->
-          </select>
+      <!-- Console -->
+      <section class="mt-12">
+        <h2 class="text-2xl font-bold text-[#8a00c8] mb-4">💻 Hacker Console</h2>
+        <div id="console" class="bg-black text-green-400 font-mono p-4 rounded-md border border-green-700 h-64 overflow-auto text-sm shadow-inner">
+          <div id="console-output"></div>
         </div>
+      </section>
 
-        <div id="medium-posts" class="space-y-6 text-sm"></div>
-      </aside>
+      <!-- Tools -->
+      <section class="mt-10">
+        <h2 class="text-2xl font-bold text-[#8a00c8] mb-4">🛠️ Hacker Tools I Use</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="bg-[#1f1a22] p-4 rounded-lg border border-[#3a2a4a] shadow">
+            <h3 class="text-white font-semibold mb-1">🧪 Burp Suite</h3>
+            <p class="text-gray-400 text-sm">Web vulnerability scanner & proxy for pentesting web apps.</p>
+          </div>
+          <div class="bg-[#1f1a22] p-4 rounded-lg border border-[#3a2a4a] shadow">
+            <h3 class="text-white font-semibold mb-1">🔍 Nmap</h3>
+            <p class="text-gray-400 text-sm">Network discovery and security auditing tool.</p>
+          </div>
+          <div class="bg-[#1f1a22] p-4 rounded-lg border border-[#3a2a4a] shadow">
+            <h3 class="text-white font-semibold mb-1">💣 Metasploit</h3>
+            <p class="text-gray-400 text-sm">Penetration testing framework with exploit modules.</p>
+          </div>
+          <div class="bg-[#1f1a22] p-4 rounded-lg border border-[#3a2a4a] shadow">
+            <h3 class="text-white font-semibold mb-1">📦 Wireshark</h3>
+            <p class="text-gray-400 text-sm">Packet analyzer for network traffic analysis.</p>
+          </div>
+        </div>
+      </section>
+    </main>
 
-      
-      
+    <!-- Blog Sidebar -->
+    <aside class="w-full md:w-80 mt-10 md:mt-0 md:pl-8">
+      <h2 class="text-xl font-bold mb-4 text-[#8a00c8]">Latest Medium Posts</h2>
+      <div class="mb-4">
+        <label for="tag-filter" class="block text-sm font-medium text-white mb-1">Filter by Category</label>
+        <select id="tag-filter" class="bg-[#1f1a22] border border-[#3a2a4a] text-white rounded px-3 py-2 w-full">
+          <option value="all">All</option>
+          <option value="pentesting">Pentesting</option>
+          <option value="tools">Tools</option>
+          <option value="tutorials">Tutorials</option>
+        </select>
+      </div>
+      <div id="medium-posts" class="space-y-6 text-sm"></div>
+    </aside>
+  </div>
 
-      <script>
-        const rssUrl = 'https://medium.com/feed/@barmansubhajit09';
-        const apiUrl = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(rssUrl);
-        const postsContainer = document.getElementById('medium-posts');
-        const tagFilter = document.getElementById('tag-filter');
-        let allPosts = [];
+  <!-- JS: Medium RSS Feed -->
+  <script>
+    const rssUrl = 'https://medium.com/feed/@barmansubhajit09';
+    const apiUrl = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(rssUrl);
+    const postsContainer = document.getElementById('medium-posts');
+    const tagFilter = document.getElementById('tag-filter');
+    let allPosts = [];
 
-        fetch(apiUrl)
-          .then(response => response.json())
-          .then(data => {
-            allPosts = data.items.slice(0, 10); // store all posts
-            renderPosts("all");
-          })
-          .catch(error => {
-            console.error('Error fetching Medium feed:', error);
-          });
+    fetch(apiUrl)
+      .then(response => response.json())
+      .then(data => {
+        allPosts = data.items.slice(0, 10);
+        renderPosts("all");
+      })
+      .catch(error => {
+        console.error('Error fetching Medium feed:', error);
+      });
 
-        function renderPosts(filterTag) {
-          postsContainer.innerHTML = ''; // clear posts
+    function renderPosts(filterTag) {
+      postsContainer.innerHTML = '';
+      allPosts.forEach(post => {
+        const tags = post.categories.map(tag => tag.toLowerCase());
+        if (filterTag === 'all' || tags.includes(filterTag)) {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(post.content, 'text/html');
+          const img = doc.querySelector('img');
+          const imgSrc = img ? img.src : 'https://via.placeholder.com/300x200?text=No+Image';
+          const snippet = doc.body.textContent.trim().slice(0, 100) + '...';
 
-          allPosts.forEach(post => {
-            const tags = post.categories.map(tag => tag.toLowerCase());
-            if (filterTag === 'all' || tags.includes(filterTag)) {
-              const parser = new DOMParser();
-              const doc = parser.parseFromString(post.content, 'text/html');
-              const img = doc.querySelector('img');
-              const imgSrc = img ? img.src : 'https://via.placeholder.com/300x200?text=No+Image';
-              const snippet = doc.body.textContent.trim().slice(0, 100) + '...';
+          const postDiv = document.createElement('div');
+          postDiv.className = "bg-[#3a2a4a] rounded-lg overflow-hidden transition transform hover:scale-[1.03] hover:bg-[#4a2f5a] hover:shadow-2xl duration-300";
 
-              const postDiv = document.createElement('div');
-              postDiv.className = "bg-[#3a2a4a] rounded-lg overflow-hidden transition transform hover:scale-[1.03] hover:bg-[#4a2f5a] hover:shadow-2xl duration-300";
-
-              postDiv.innerHTML = `
-          <a href="${post.link}" target="_blank" class="block">
-            <img src="${imgSrc}" alt="Blog thumbnail" class="w-full h-40 object-cover">
-            <div class="p-4">
-              <h3 class="text-white font-semibold text-base mb-1">${post.title}</h3>
-              <p class="text-gray-400 text-xs mb-2">${new Date(post.pubDate).toLocaleDateString()}</p>
-              <p class="text-gray-300 text-sm">${snippet}</p>
-            </div>
-          </a>
-        `;
-              postsContainer.appendChild(postDiv);
-            }
-          });
+          postDiv.innerHTML = `
+            <a href="${post.link}" target="_blank" class="block">
+              <img src="${imgSrc}" alt="Blog thumbnail" class="w-full h-40 object-cover">
+              <div class="p-4">
+                <h3 class="text-white font-semibold text-base mb-1">${post.title}</h3>
+                <p class="text-gray-400 text-xs mb-2">${new Date(post.pubDate).toLocaleDateString()}</p>
+                <p class="text-gray-300 text-sm">${snippet}</p>
+              </div>
+            </a>`;
+          postsContainer.appendChild(postDiv);
         }
-
-        tagFilter.addEventListener('change', () => {
-          renderPosts(tagFilter.value);
-        });
-      </script>
-
-      <script>
-        const consoleOutput = document.getElementById('console-output');
-
-        const commands = [
-          "Initializing console...",
-          "Loading Nmap...",
-          "nmap -sV 192.168.1.1",
-          "Starting Nmap 7.93 ( https://nmap.org ) at 2025-05-13",
-          "Scanning 192.168.1.1 [1000 ports]",
-          "Discovered open port 22/tcp on 192.168.1.1",
-          "Discovered open port 80/tcp on 192.168.1.1",
-          "Service scan completed.",
-          "Running vulnerability scan with metasploit...",
-          "Exploit found: MS17-010 (EternalBlue)",
-          "Launching payload...",
-          "Session opened: Meterpreter >"
-        ];
-
-        let index = 0;
-
-        function typeLine() {
-          if (index < commands.length) {
-            const line = document.createElement('div');
-            line.textContent = commands[index];
-            consoleOutput.appendChild(line);
-            consoleOutput.scrollTop = consoleOutput.scrollHeight;
-            index++;
-            setTimeout(typeLine, 800);
-          }
-        }
-
-        // Start typing when page is loaded
-        window.addEventListener('load', typeLine);
-      </script>
-
-
-<script>
-  function updateClock() {
-    const now = new Date();
-    document.getElementById('clock').textContent = now.toLocaleTimeString();
-  }
-  setInterval(updateClock, 1000);
-  updateClock();
-</script>
-
-<script>
-  const loaderLines = [
-    "~ Boot sequence initiated...",
-    "~ Loading kernel modules...",
-    "~ Establishing backdoor connection...",
-    "~ Decrypting payload...",
-    "~ Access granted.",
-    "~ Launching mainframe UI..."
-  ];
-
-  const loaderText = document.getElementById("loader-text");
-  let i = 0;
-
-  function typeNextLine() {
-    if (i < loaderLines.length) {
-      const line = document.createElement("div");
-      line.textContent = loaderLines[i];
-      loaderText.appendChild(line);
-      i++;
-      setTimeout(typeNextLine, 700);
-    } else {
-      // Hide loader after done
-      setTimeout(() => {
-        document.getElementById("hacker-loader").style.display = "none";
-      }, 800);
+      });
     }
-  }
 
-  // Start loader typing after page loads
-  window.addEventListener("load", typeNextLine);
-</script>
+    tagFilter.addEventListener('change', () => {
+      renderPosts(tagFilter.value);
+    });
+  </script>
 
+  <!-- Console Typing -->
+  <script>
+    const consoleOutput = document.getElementById('console-output');
+    const commands = [
+      "Initializing console...",
+      "Loading Nmap...",
+      "nmap -sV 192.168.1.1",
+      "Starting Nmap 7.93 ( https://nmap.org ) at 2025-05-13",
+      "Scanning 192.168.1.1 [1000 ports]",
+      "Discovered open port 22/tcp on 192.168.1.1",
+      "Discovered open port 80/tcp on 192.168.1.1",
+      "Service scan completed.",
+      "Running vulnerability scan with metasploit...",
+      "Exploit found: MS17-010 (EternalBlue)",
+      "Launching payload...",
+      "Session opened: Meterpreter >"
+    ];
 
+    let index = 0;
+    function typeLine() {
+      if (index < commands.length) {
+        const line = document.createElement('div');
+        line.textContent = commands[index];
+        consoleOutput.appendChild(line);
+        consoleOutput.scrollTop = consoleOutput.scrollHeight;
+        index++;
+        setTimeout(typeLine, 800);
+      }
+    }
+    window.addEventListener('load', typeLine);
+  </script>
+
+  <!-- Clock -->
+  <script>
+    function updateClock() {
+      const now = new Date();
+      document.getElementById('clock').textContent = now.toLocaleTimeString();
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
+
+  <!-- Loader -->
+  <script>
+    const loaderLines = [
+      "~ Boot sequence initiated...",
+      "~ Loading kernel modules...",
+      "~ Establishing backdoor connection...",
+      "~ Decrypting payload...",
+      "~ Access granted.",
+      "~ Launching mainframe UI..."
+    ];
+
+    const loaderText = document.getElementById("loader-text");
+    let i = 0;
+
+    function typeNextLine() {
+      if (i < loaderLines.length) {
+        const line = document.createElement("div");
+        line.textContent = loaderLines[i];
+        loaderText.appendChild(line);
+        i++;
+        setTimeout(typeNextLine, 700);
+      } else {
+        setTimeout(() => {
+          document.getElementById("hacker-loader").style.display = "none";
+        }, 800);
+      }
+    }
+
+    window.addEventListener("load", typeNextLine);
+  </script>
 </body>
-
 </html>
