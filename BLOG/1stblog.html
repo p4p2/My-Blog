@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Red Team Blog - Subhajit Barman</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-[#2f2930] text-white min-h-screen flex flex-col justify-between">
+
+    <!-- Header -->
+    <header class="max-w-7xl mx-auto px-6 md:px-12 py-10">
+      <h1 class="text-4xl font-extrabold text-[#e91e63] uppercase tracking-wider mb-2">
+        Red Team Operations
+      </h1>
+      <p class="text-sm text-white max-w-2xl">
+        A deep dive into adversary simulation, offensive security techniques, and red team strategies for securing modern infrastructures.
+      </p>
+    </header>
+
+    <!-- Blog Content -->
+    <main class="flex-grow max-w-4xl mx-auto px-6 md:px-12 pb-10">
+      <article class="prose prose-invert prose-p:text-white prose-headings:text-[#e91e63] max-w-none">
+
+        <h2>What is a Red Team?</h2>
+        <img
+          src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*K5HbUnGmUlyCTaZTgFHw1Q.png"
+          alt="Red Team Illustration"
+          class="rounded-lg shadow-lg my-4"
+        />
+        <p>
+          A red team simulates real-world cyber attacks to test an organization's detection and response capabilities. Unlike vulnerability assessments or simple penetration tests, red team engagements are stealthy, goal-oriented, and mimic advanced threat actors.
+        </p>
+
+        <h2>Core Phases of a Red Team Operation</h2>
+        <img
+          src="https://assets-global.website-files.com/5ff66329429d880392f6cba2/6477da97f65b674c9fd3b98e_red%20team%20attack%20phases.png"
+          alt="Red Team Engagement Phases"
+          class="rounded-lg shadow-lg my-4"
+        />
+        <ul>
+          <li><strong>Reconnaissance:</strong> Gathering OSINT on the target organization, domains, IPs, emails, etc.</li>
+          <li><strong>Initial Access:</strong> Gaining a foothold using phishing, credential stuffing, or exploiting public-facing assets.</li>
+          <li><strong>Persistence & Privilege Escalation:</strong> Establishing a reliable presence and elevating privileges to access more resources.</li>
+          <li><strong>Lateral Movement:</strong> Navigating through the network to access valuable systems.</li>
+          <li><strong>Exfiltration & Reporting:</strong> Extracting simulated 'flag' data and documenting findings for blue team analysis.</li>
+        </ul>
+
+        <h2>Tools Commonly Used</h2>
+        <img
+          src="https://media.licdn.com/dms/image/D4E12AQFRAqWboKOShw/article-cover_image-shrink_720_1280/0/1693471328426?e=2147483647&v=beta&t=-YWRMnwl8qOdJzKMo-nJHFkXRAa1YJ7A4OS8PPuCIXs"
+          alt="Red Team Tools"
+          class="rounded-lg shadow-lg my-4"
+        />
+        <p>Red teams rely on a mix of open-source and custom tools:</p>
+        <ul>
+          <li><code>Cobalt Strike</code> – post-exploitation and command-and-control framework</li>
+          <li><code>BloodHound</code> – Active Directory enumeration</li>
+          <li><code>Impacket</code> – network protocol attacks and exploitation</li>
+          <li><code>Metasploit</code> – payload creation and exploitation</li>
+        </ul>
+
+        <h2>Why Red Teaming Matters</h2>
+        <p>
+          Organizations often have security controls in place but fail to understand how they hold up under real-world adversaries. Red teaming exposes gaps in monitoring, alerting, and incident response, providing realistic insights to improve defenses.
+        </p>
+
+        <h2>Final Thoughts</h2>
+        <img
+          src="https://i0.wp.com/www.peerlyst.com/assets/uploads/users/user1521/red_team_vs_blue_team.jpg"
+          alt="Red Team vs Blue Team"
+          class="rounded-lg shadow-lg my-4"
+        />
+        <p>
+          Red team operations are an essential part of mature security programs. They not only test technical defenses but also the people and processes that respond to incidents. When done correctly, red teaming strengthens an organization’s resilience against modern threats.
+        </p>
+
+      </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#1f1b20] text-xs text-white text-center py-4">
+      Copyright © Subhajit Barman 2025
+    </footer>
+  </body>
+</html>
